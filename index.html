@@ -4,14 +4,16 @@
 <title>
 portfolio project
 </title>
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&family=Russo+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:italic
+,wght@1,500&family=Russo+One&display=swap" rel="stylesheet">
 <link rel ="stylesheet" type="text/css" href="default.css">
+<link id="theme-style" rel="stylesheet" type="text/css" href="">
 </head>
 <body>
 
@@ -40,13 +42,13 @@ portfolio project
        </div>
       
       <div class="left-column">
-        <img  id="profile-pic"src="./images/personal-img.jpg">
+        <img  id="profile-pic" src="./images/personal-img.jpg">
         <h4 class="theme">Personalise Theme</h4>
          <div id="theme-options-wrapper">
-           <div class="theme-dot" id="light-mode"></div>
-           <div class="theme-dot" id="dark-mode"></div>
-           <div class="theme-dot" id="ambient-mode"></div> 
-           <div class="theme-dot" id="brown-mode"></div>
+           <div data-mode="light" class="theme-dot" id="light-mode"></div>
+           <div data-mode="dark" class="theme-dot" id="dark-mode"></div>
+           <div data-mode="ambient" class="theme-dot" id="ambient-mode"></div> 
+           <div data-mode="brown" class="theme-dot" id="brown-mode"></div>
          </div>
            <p id="settings-note">Theme options will be saved for<br>your next visit</p>
       </div>
@@ -72,10 +74,29 @@ portfolio project
   
   <div class="about-wrapper">
     <div class="about-me">
-    
+    <h4 class="theme">More about me</h4>
+    <p class="more-info"> I relish the joy of completing challenging projects that is why I love programming.</p>
+        <p class="more-info"> I love multitasking and the adrenaline rush that comes with playing codm competitions. </p>
+        <hr>
+        
+        <h4 class="theme">TOP EXPERTISE</h4>
+        <p class="more-info">Entry-level Prgrammer in 300 level studying computer science<a target="_blank" href="Resume.pdf"> Download Resume</a></p>
+        <div id="skills">
+          <ul>
+            <li>Html</li>
+            <li>Css</li> 
+            <li>bootstrap</li>
+          </ul>
+           <ul>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Capcut editing</li>
+          </ul>
+        </div>
     </div>
     <div class="social-links">
-    
+    <img id="social-img" src="./images/social.jpg">
+    <h3 class="find">Find me on  <a  target="_blank" href="https://youtube.com/@SoftOnOctane">YouTube</a>, Twitter<br> and <a  target="_blank" href="https://www.tiktok.com/@softonoctane?_t=8egB75lcrzB&_r=1">Tiktok</a></h3>
     </div>
  </div>
 </div>
@@ -83,14 +104,57 @@ portfolio project
 
 <section class="s1">
   <div class="main-container">
-  Portfolio 
+    <h3 id="project_header"> Some Of My Past Projects</h3>
+     <div class="post-wrapper">
+       <div class="post">
+         <img  class="thumbnail" src="./images/html-project.jpg">
+         <div class="post-review">
+           <h6 class="post-title">Html Project</h6>
+           <p class="post-description">
+         This was my first html project i ever embarked on myself.
+           </p>
+           <a href="#">Read more</a>
+         </div>
+        </div>  
+       <div class="post">
+        <img  class="thumbnail" src="./images/tiktok-project.jpg">
+         <div class="post-review">
+          <h6 class="post-title">Tiktok Project</h6>
+          <p class="post-description">
+         Here is one of my favourite Tiktok edit I ever made.
+          </p>
+          <a href="#">Read more</a>
+        </div>
+      </div>  
+      <div class="post">
+       <img  class="thumbnail" src="./images/html-project.jpg">
+       <div class="post-review">
+         <h6 class="post-title">Html Project</h6>
+         <p class="post-description">
+        This was my first html project i ever embarked on myself.
+         </p>
+         <a href="post.html">Read more</a>
+       </div>
+    </div>  
+  </div>
   </div>
   </section>
   
  <section class="s2">
   <div class="main-container">
-  Contact
+    <h3 style="text-align: center;">Get In Touch</h3>
+   <form id="contact-form">
+     <input  class="input-field" type="text" placeholder="name" name="name">
+     <label>Subject</label>
+     <input  class="input-field" type="text" placeholder="name" name="subject">
+     <label>Email</label>
+     <input class="input-field" type="email" placeholder=" your email">
+     <label>Message</label>
+          <textarea class="input-field" name="message"></textarea>
+     <input  id="submit-btn" type="submit" value="send">
+   </form>
   </div>
 </section>
+<script type="script/JavaScript" src="script.js"></script>
 </body>
 </html>
