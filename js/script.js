@@ -1,5 +1,13 @@
 console.log( 'its working' )
 
+let theme = localStorage.getItem('theme')
+
+  if(theme == null){
+    setTheme =('light')
+  }else{
+    setTheme(theme)
+}
+
 let themeDots = document.getElementsByClassName('theme-dot' )
 
 for ( var i = 0; themeDots.length > i; i++ ) {
@@ -18,9 +26,11 @@ function setTheme ( mode ) {
         document.getElementById( 'theme-style' ).href = './css/dark.css'
     }
     if ( mode == 'ambient' ) {
-        document.getElementById( 'theme-style' ).href = './css/ambient.css'
+        document.getElementById( 'theme-style' ).href = '.css/ambient.css'
     }
     if ( mode == 'brown' ) {
         document.getElementById( 'theme-style' ).href = './css/brown.css'
     }
+    localStorage.setItem('theme', mode)
 }
+  
